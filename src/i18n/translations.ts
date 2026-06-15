@@ -50,6 +50,47 @@ const en = {
     contact: 'Get in touch',
     placeholder: 'Coming together in the next phases.',
   },
+  work: {
+    subtitle:
+      'Three real things — shipped, tested, and live. No demos, no filler.',
+    star: 'Flagship',
+    links: {
+      live: 'Live',
+      admin: 'Admin',
+      repo: 'Code',
+      video: 'Watch demo',
+    },
+    projects: {
+      ecommerce: {
+        kindLabel: 'Web platform',
+        name: 'E-commerce Platform',
+        tagline: 'A full production commerce system',
+        blurb:
+          'A Next.js + Express monorepo — storefront, admin dashboard, and REST API. PostgreSQL/Prisma, Redis, JWT auth, Stripe checkout, Meilisearch and email, deployed across Vercel, Railway, Neon and Upstash with Sentry and CI.',
+        metrics: [
+          { value: '~150', label: 'tests' },
+          { value: '93% / 100%', label: 'web / admin coverage' },
+          { value: '3 apps', label: 'web · admin · API monorepo' },
+        ],
+      },
+      'simon-says': {
+        kindLabel: 'Embedded',
+        name: 'Simon Says v2',
+        tagline: 'Embedded memory game on bare metal',
+        blurb:
+          'C++ firmware for an Arduino Uno: a 1602 LCD, an EEPROM high-score that survives power cycles, a buzzer playing tones in A minor, and rounds that speed up to a 150 ms floor. Real circuit, real constraints.',
+        metrics: [],
+      },
+      domsenz: {
+        kindLabel: 'Startup',
+        name: 'DomSenz',
+        tagline: 'A Bulgarian smart-home startup',
+        blurb:
+          'Not a hobby — a company with a five-year plan. A live pre-launch landing with a waitlist is shipped; Climate-Sens device firmware is in early development.',
+        metrics: [],
+      },
+    },
+  },
   footer: {
     builtWith: 'Built with',
     source: 'Source',
@@ -110,6 +151,47 @@ const bg: Translations = {
     skills: 'Умения и стек',
     contact: 'Свържи се',
     placeholder: 'Предстои в следващите фази.',
+  },
+  work: {
+    subtitle:
+      'Три реални неща — завършени, тествани и на живо. Без демота, без пълнеж.',
+    star: 'Водещ проект',
+    links: {
+      live: 'На живо',
+      admin: 'Админ',
+      repo: 'Код',
+      video: 'Гледай демо',
+    },
+    projects: {
+      ecommerce: {
+        kindLabel: 'Уеб платформа',
+        name: 'E-commerce платформа',
+        tagline: 'Цялостна production система за търговия',
+        blurb:
+          'Next.js + Express монорепо — магазин, админ панел и REST API. PostgreSQL/Prisma, Redis, JWT, Stripe плащания, Meilisearch и имейли, деплойнато през Vercel, Railway, Neon и Upstash, със Sentry и CI.',
+        metrics: [
+          { value: '~150', label: 'теста' },
+          { value: '93% / 100%', label: 'покритие web / admin' },
+          { value: '3 приложения', label: 'web · admin · API монорепо' },
+        ],
+      },
+      'simon-says': {
+        kindLabel: 'Embedded',
+        name: 'Simon Says v2',
+        tagline: 'Embedded игра на паметта върху чист хардуер',
+        blurb:
+          'C++ фърмуер за Arduino Uno: 1602 LCD, EEPROM рекорд, който преживява изключване, бъзер с тонове в ла минор и рундове, ускоряващи се до 150 ms. Истинска схема, истински ограничения.',
+        metrics: [],
+      },
+      domsenz: {
+        kindLabel: 'Стартъп',
+        name: 'ДомСенз',
+        tagline: 'Български smart-home стартъп',
+        blurb:
+          'Не хоби — компания с петгодишен план. Pre-launch landing с waitlist вече е на живо; фърмуерът за Климат сенз е в ранна разработка.',
+        metrics: [],
+      },
+    },
   },
   footer: {
     builtWith: 'Изградено с',

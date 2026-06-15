@@ -2,9 +2,10 @@ import { Container } from './ui/Container'
 import { Section } from './ui/Section'
 import { Hero } from './sections/Hero'
 import { About } from './sections/About'
+import { Work } from './sections/Work'
 import { useT } from '../i18n/context'
 
-const PLACEHOLDER_SECTIONS = ['work', 'skills', 'contact'] as const
+const PLACEHOLDER_SECTIONS = ['skills', 'contact'] as const
 
 /**
  * Localized landing page. Hero + About are real; the remaining anchored
@@ -16,6 +17,7 @@ export function HomePage() {
     <>
       <Hero />
       <About />
+      <Work />
       {PLACEHOLDER_SECTIONS.map((id) => (
         <Section key={id} id={id} className="border-t border-line/50">
           <Container>
