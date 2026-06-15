@@ -12,6 +12,8 @@ const en = {
     work: 'Work',
     skills: 'Skills',
     contact: 'Contact',
+    menu: 'Menu',
+    skip: 'Skip to content',
   },
   hero: {
     eyebrow: 'Full-stack & embedded developer',
@@ -118,6 +120,8 @@ const bg: Translations = {
     work: 'Проекти',
     skills: 'Умения',
     contact: 'Контакт',
+    menu: 'Меню',
+    skip: 'Към съдържанието',
   },
   hero: {
     eyebrow: 'Full-stack & embedded разработчик',

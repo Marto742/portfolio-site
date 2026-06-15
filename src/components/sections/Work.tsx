@@ -98,9 +98,9 @@ export function Work() {
     <Section id="work" className="border-t border-line/50">
       <Container>
         <header className="max-w-2xl">
-          <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
+          <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
             {t.sections.work}
-          </p>
+          </h2>
           <p className="mt-4 text-lg text-muted">{t.work.subtitle}</p>
         </header>
 
