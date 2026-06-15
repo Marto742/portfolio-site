@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link, useLocation } from 'react-router'
 import { Container } from '../ui/Container'
 import { LanguageSwitch } from './LanguageSwitch'
@@ -35,6 +35,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [lastPath, setLastPath] = useState(pathname)
+  const headerRef = useRef<HTMLElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
   const year = new Date().getFullYear()
 
   // Close the mobile menu when the route changes — React's "adjust state during
@@ -43,6 +45,27 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     setLastPath(pathname)
     setMenuOpen(false)
   }
+
+  // While open, close the menu on Escape (returning focus to the toggle) or on
+  // a click outside the header.
+  useEffect(() => {
+    if (!menuOpen) return
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+        menuButtonRef.current?.focus()
+      }
+    }
+    function onPointerDown(event: PointerEvent) {
+      if (!headerRef.current?.contains(event.target as Node)) setMenuOpen(false)
+    }
+    document.addEventListener('keydown', onKeyDown)
+    document.addEventListener('pointerdown', onPointerDown)
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.removeEventListener('pointerdown', onPointerDown)
+    }
+  }, [menuOpen])
 
   // Section links live on the home page. From a case-study page, point back to
   // the home page's section; on the home page, use a same-page anchor.
@@ -59,7 +82,10 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         {t.nav.skip}
       </a>
 
-      <header className="sticky top-0 z-50 border-b border-line/60 bg-canvas/80 backdrop-blur-md">
+      <header
+        ref={headerRef}
+        className="sticky top-0 z-50 border-b border-line/60 bg-canvas/80 backdrop-blur-md"
+      >
         <Container className="flex h-16 items-center justify-between gap-6">
           <Link
             to={homePath(lang)}
@@ -84,6 +110,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-2">
             <LanguageSwitch />
             <button
+              ref={menuButtonRef}
               type="button"
               className="-mr-2 inline-flex items-center justify-center rounded-md p-2 text-muted transition-colors hover:text-fg md:hidden"
               aria-label={t.nav.menu}

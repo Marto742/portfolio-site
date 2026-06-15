@@ -14,10 +14,34 @@
   --color-muted: #a39b8b; /* secondary text                       */
   --color-line: #2a2620; /* fine borders / dividers               */
 
-  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Cormorant Variable', ui-serif, Georgia, serif;
+  --font-sans:
+    'Manrope Variable', 'Manrope Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    'Cormorant Variable', 'Cormorant Fallback', ui-serif, Georgia, serif;
   --font-mono:
     'JetBrains Mono Variable', ui-monospace, 'Cascadia Code', monospace;
+}
+
+/* ------------------------------------------------------------------ *
+ * Metric-matched fallbacks (generated from the real font files via
+ * fontaine) so the swap from system font → web font causes ~no layout
+ * shift. Applied only where the local system font exists.
+ * ------------------------------------------------------------------ */
+@font-face {
+  font-family: 'Manrope Fallback';
+  src: local('Arial');
+  size-adjust: 99.4839%;
+  ascent-override: 107.153%;
+  descent-override: 30.1556%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Cormorant Fallback';
+  src: local('Georgia');
+  size-adjust: 87.9317%;
+  ascent-override: 105.0816%;
+  descent-override: 32.639%;
+  line-gap-override: 0%;
 }
 
 @layer base {
