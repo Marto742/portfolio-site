@@ -91,6 +91,10 @@ const en = {
       },
     },
   },
+  caseStudy: {
+    cta: 'Case study',
+    back: 'Back to projects',
+  },
   footer: {
     builtWith: 'Built with',
     source: 'Source',
@@ -192,6 +196,10 @@ const bg: Translations = {
         metrics: [],
       },
     },
+  },
+  caseStudy: {
+    cta: 'Детайли',
+    back: 'Към проектите',
   },
   footer: {
     builtWith: 'Изградено с',

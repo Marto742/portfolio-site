@@ -1,7 +1,9 @@
+import { Link } from 'react-router'
 import { Container } from '../ui/Container'
 import { Section } from '../ui/Section'
 import { Tag } from '../ui/Tag'
-import { useT } from '../../i18n/context'
+import { useLang, useT } from '../../i18n/context'
+import { workPath } from '../../i18n/routing'
 import { PROJECTS, type Project } from '../../content/projects'
 import { cn } from '../../lib/utils'
 
@@ -13,6 +15,7 @@ function ProjectCard({
   featured?: boolean
 }) {
   const t = useT()
+  const lang = useLang()
   const tp = t.work.projects[project.slug]
 
   return (
@@ -63,7 +66,13 @@ function ProjectCard({
         ))}
       </div>
 
-      <div className="mt-auto flex flex-wrap gap-5 pt-8">
+      <div className="mt-auto flex flex-wrap items-center gap-5 pt-8">
+        <Link
+          to={workPath(lang, project.slug)}
+          className="font-mono text-sm font-medium text-accent transition-colors hover:text-accent-light"
+        >
+          {t.caseStudy.cta} →
+        </Link>
         {project.links.map((link) => (
           <a
             key={link.href}

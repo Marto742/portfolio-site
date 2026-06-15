@@ -35,3 +35,8 @@ export function hreflangLinks() {
     { rel: 'alternate', hrefLang: 'x-default', href: '/' },
   ]
 }
+
+/** Case-study path for a project in the given language. */
+export function workPath(lang: Lang, slug: string): string {
+  return lang === 'bg' ? `/bg/work/${slug}` : `/work/${slug}`
+}
