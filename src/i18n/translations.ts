@@ -15,9 +15,11 @@ const en = {
   },
   hero: {
     eyebrow: 'Full-stack & embedded developer',
-    lead: 'I build production software and real hardware — self-taught, from zero, shipped and live.',
+    lead: 'Self-taught at 17 — I build production web platforms and real embedded hardware, from zero to shipped.',
     viewWork: 'View projects',
     getInTouch: 'Get in touch',
+    location: 'Plovdiv, Bulgaria · Available for work',
+    scroll: 'Scroll',
   },
   sections: {
     about: 'About',
@@ -52,9 +54,11 @@ const bg: Translations = {
   },
   hero: {
     eyebrow: 'Full-stack & embedded разработчик',
-    lead: 'Изграждам production софтуер и истински хардуер — самоук, от нула, завършено и на живо.',
+    lead: 'Самоук на 17 — изграждам production уеб платформи и истински embedded хардуер, от нула до завършено.',
     viewWork: 'Виж проектите',
     getInTouch: 'Свържи се',
+    location: 'Пловдив, България · Свободен за работа',
+    scroll: 'Надолу',
   },
   sections: {
     about: 'За мен',
