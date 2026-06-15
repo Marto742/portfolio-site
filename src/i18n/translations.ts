@@ -21,6 +21,28 @@ const en = {
     location: 'Plovdiv, Bulgaria · Available for work',
     scroll: 'Scroll',
   },
+  about: {
+    heading: "I taught myself to build — and I didn't stop at code.",
+    paragraphs: [
+      "I'm Martin, a 17-year-old developer from Plovdiv, Bulgaria. I started from zero — no bootcamp, no degree — and learned by shipping real things.",
+      'On the software side I build and run production web platforms end to end: React frontends, Node APIs, databases, payments, tests, monitoring, deploys. On the hardware side I write C++ firmware for microcontrollers — real circuits, real constraints.',
+      "That combination is the point. Most developers pick one lane; I work the whole stack, from the silicon to the screen — and I'm turning it into a company: DomSenz, a Bulgarian smart-home startup.",
+    ],
+    pillars: [
+      {
+        title: 'Self-taught, from zero',
+        body: 'No shortcuts. Everything here I learned by building it.',
+      },
+      {
+        title: 'Software + hardware',
+        body: 'Production web systems and real embedded devices.',
+      },
+      {
+        title: 'I ship',
+        body: 'Tested, deployed, and live — not slideware.',
+      },
+    ],
+  },
   sections: {
     about: 'About',
     work: 'Selected work',
@@ -59,6 +81,28 @@ const bg: Translations = {
     getInTouch: 'Свържи се',
     location: 'Пловдив, България · Свободен за работа',
     scroll: 'Надолу',
+  },
+  about: {
+    heading: 'Научих се да градя сам — и не спрях при кода.',
+    paragraphs: [
+      'Аз съм Мартин, на 17 от Пловдив. Започнах от нула — без курсове, без диплома — и се научих, като градя реални неща.',
+      'От страната на софтуера изграждам и поддържам production уеб платформи изцяло сам: React фронтенд, Node API-та, бази данни, плащания, тестове, мониторинг, деплойменти. От страната на хардуера пиша C++ фърмуер за микроконтролери — истински схеми, истински ограничения.',
+      'Точно тази комбинация е смисълът. Повечето избират едно платно; аз работя целия стек, от силиция до екрана — и го превръщам в компания: ДомСенз, български smart-home стартъп.',
+    ],
+    pillars: [
+      {
+        title: 'Самоук, от нула',
+        body: 'Без преки пътища. Всичко тук съм научил, като съм го построил.',
+      },
+      {
+        title: 'Софтуер + хардуер',
+        body: 'Production уеб системи и истински embedded устройства.',
+      },
+      {
+        title: 'Завършвам нещата',
+        body: 'Тествано, деплойнато и на живо — не само демота.',
+      },
+    ],
   },
   sections: {
     about: 'За мен',

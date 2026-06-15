@@ -1,12 +1,13 @@
 import { Container } from './ui/Container'
 import { Section } from './ui/Section'
 import { Hero } from './sections/Hero'
+import { About } from './sections/About'
 import { useT } from '../i18n/context'
 
-const PLACEHOLDER_SECTIONS = ['about', 'work', 'skills', 'contact'] as const
+const PLACEHOLDER_SECTIONS = ['work', 'skills', 'contact'] as const
 
 /**
- * Localized landing page. Hero is real (Phase 3); the remaining anchored
+ * Localized landing page. Hero + About are real; the remaining anchored
  * sections are stubs that get their content in the coming phases.
  */
 export function HomePage() {
@@ -14,6 +15,7 @@ export function HomePage() {
   return (
     <>
       <Hero />
+      <About />
       {PLACEHOLDER_SECTIONS.map((id) => (
         <Section key={id} id={id} className="border-t border-line/50">
           <Container>
