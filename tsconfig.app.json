@@ -19,11 +19,14 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* React Router framework mode — generated route types */
+    "rootDirs": [".", "./.react-router/types"],
+
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", ".react-router/types/**/*"]
 }

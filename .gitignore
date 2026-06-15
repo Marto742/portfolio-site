@@ -21,6 +21,10 @@ dist-ssr
 /coverage
 *.tsbuildinfo
 
+# React Router framework mode
+/build
+.react-router/
+
 # Deploy
 .vercel
 
