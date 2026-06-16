@@ -97,6 +97,34 @@ const en = {
     cta: 'Case study',
     back: 'Back to projects',
   },
+  skills: {
+    subtitle: 'What I actually build with — drawn from the projects above.',
+    groups: {
+      frontend: 'Frontend',
+      backend: 'Backend',
+      embedded: 'Embedded & hardware',
+      tooling: 'Tooling & DevOps',
+    },
+  },
+  contact: {
+    subtitle:
+      "Hiring, freelance, or just want to talk shop? I'd love to hear from you.",
+    orReach: 'Or reach me directly',
+    githubLabel: 'GitHub',
+    form: {
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      send: 'Send message',
+      sending: 'Sending…',
+      success: "Thanks — your message is on its way. I'll reply soon.",
+      error: 'Something went wrong. Please email me directly instead.',
+      requiredName: 'Please tell me your name.',
+      requiredEmail: 'Please add your email so I can reply.',
+      invalidEmail: 'That email address looks off.',
+      requiredMessage: 'Please add a short message.',
+    },
+  },
   footer: {
     builtWith: 'Built with',
     source: 'Source',
@@ -204,6 +232,34 @@ const bg: Translations = {
   caseStudy: {
     cta: 'Детайли',
     back: 'Към проектите',
+  },
+  skills: {
+    subtitle: 'С какво реално градя — извлечено от проектите по-горе.',
+    groups: {
+      frontend: 'Frontend',
+      backend: 'Backend',
+      embedded: 'Embedded & хардуер',
+      tooling: 'Инструменти & DevOps',
+    },
+  },
+  contact: {
+    subtitle:
+      'Работа, фрийланс или просто да си говорим за код? С удоволствие ще те чуя.',
+    orReach: 'Или ме намери директно',
+    githubLabel: 'GitHub',
+    form: {
+      name: 'Име',
+      email: 'Имейл',
+      message: 'Съобщение',
+      send: 'Изпрати',
+      sending: 'Изпращане…',
+      success: 'Благодаря — съобщението е на път. Ще отговоря скоро.',
+      error: 'Нещо се обърка. Моля, пиши ми директно на имейла.',
+      requiredName: 'Моля, кажи името си.',
+      requiredEmail: 'Моля, добави имейл, за да отговоря.',
+      invalidEmail: 'Този имейл изглежда невалиден.',
+      requiredMessage: 'Моля, добави кратко съобщение.',
+    },
   },
   footer: {
     builtWith: 'Изградено с',
