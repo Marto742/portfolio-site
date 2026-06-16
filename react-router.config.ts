@@ -11,5 +11,5 @@ export default {
   // Static site: no runtime server. Every route is prerendered to plain HTML
   // at build time for SEO + fast first paint.
   ssr: false,
-  prerender: ['/', '/bg', ...workPaths],
+  prerender: ['/', '/bg', '/cv', ...workPaths],
 } satisfies Config

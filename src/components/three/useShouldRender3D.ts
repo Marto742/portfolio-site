@@ -3,13 +3,15 @@ import { useSyncExternalStore } from 'react'
 let cached: boolean | undefined
 
 function detect(): boolean {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    return false
   if (!window.matchMedia('(min-width: 768px) and (pointer: fine)').matches)
     return false
   if ((navigator.hardwareConcurrency ?? 2) < 4) return false
   try {
     const canvas = document.createElement('canvas')
-    if (!(canvas.getContext('webgl2') ?? canvas.getContext('webgl'))) return false
+    if (!(canvas.getContext('webgl2') ?? canvas.getContext('webgl')))
+      return false
   } catch {
     return false
   }

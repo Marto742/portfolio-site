@@ -201,6 +201,15 @@ export function Contact() {
             className="text-fg underline-offset-4 transition-colors hover:text-accent hover:underline"
           >
             {t.contact.githubLabel} ↗
+          </a>{' '}
+          ·{' '}
+          <a
+            href="/cv"
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline-offset-4 transition-colors hover:text-accent hover:underline"
+          >
+            CV ↗
           </a>
         </p>
       </Container>

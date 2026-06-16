@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+      .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        background: #0b0a09;
+        color: #f5f1e8;
+        padding: 80px 96px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+      }
+      /* warm amber glow */
+      .glow {
+        position: absolute;
+        top: -240px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1000px;
+        height: 600px;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(212, 168, 67, 0.22),
+          transparent 70%
+        );
+      }
+      /* fine engineering dot-grid */
+      .grid {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          circle,
+          #2a2620 1.4px,
+          transparent 1.4px
+        );
+        background-size: 38px 38px;
+        -webkit-mask-image: radial-gradient(
+          ellipse at 50% 0%,
+          #000 0%,
+          transparent 75%
+        );
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+      .eyebrow {
+        font-family: 'Consolas', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.28em;
+        font-size: 24px;
+        color: #d4a843;
+      }
+      .name {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 132px;
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        margin: 26px 0 0;
+      }
+      .lead {
+        font-family: Arial, sans-serif;
+        font-size: 32px;
+        line-height: 1.4;
+        color: #a39b8b;
+        margin-top: 30px;
+        max-width: 880px;
+      }
+      .rule {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 26px;
+        border-top: 1px solid #2a2620;
+        font-family: 'Consolas', monospace;
+        font-size: 22px;
+        color: #a39b8b;
+      }
+      .rule .mark {
+        color: #d4a843;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="glow"></div>
+      <div class="grid"></div>
+      <div class="content">
+        <div class="eyebrow">Full-stack &amp; embedded developer</div>
+        <h1 class="name">Martin Petrov</h1>
+        <p class="lead">
+          Self-taught, from zero — production web platforms and real embedded
+          hardware, shipped and live.
+        </p>
+      </div>
+      <div class="rule">
+        <span class="mark">MP</span>
+        <span>Plovdiv, Bulgaria</span>
+      </div>
+    </div>
+  </body>
+</html>

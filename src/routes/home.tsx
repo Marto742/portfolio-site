@@ -1,14 +1,18 @@
 import { HomePage } from '../components/HomePage'
 import { translations } from '../i18n/translations'
-import { hreflangLinks } from '../i18n/routing'
+import { pageMeta, personSchema } from '../lib/seo'
 
 export function meta() {
   const m = translations.en.meta
-  return [{ title: m.title }, { name: 'description', content: m.description }]
-}
-
-export function links() {
-  return hreflangLinks()
+  return [
+    ...pageMeta({
+      lang: 'en',
+      pathname: '/',
+      title: m.title,
+      description: m.description,
+    }),
+    { 'script:ld+json': personSchema() },
+  ]
 }
 
 export default function Home() {

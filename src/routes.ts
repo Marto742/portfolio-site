@@ -5,4 +5,5 @@ export default [
   route('bg', 'routes/home.bg.tsx'),
   route('work/:slug', 'routes/work.tsx'),
   route('bg/work/:slug', 'routes/work.tsx', { id: 'work-bg' }),
+  route('cv', 'routes/cv.tsx'),
 ] satisfies RouteConfig

@@ -84,7 +84,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
       <header
         ref={headerRef}
-        className="sticky top-0 z-50 border-b border-line/60 bg-canvas/80 backdrop-blur-md"
+        className="sticky top-0 z-50 border-b border-line/60 bg-canvas/80 backdrop-blur-md print:hidden"
       >
         <Container className="flex h-16 items-center justify-between gap-6">
           <Link
@@ -148,7 +148,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         {children}
       </main>
 
-      <footer className="border-t border-line">
+      <footer className="border-t border-line print:hidden">
         <Container className="flex flex-col items-start gap-6 py-12 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-2">
             <p className="font-mono text-xs text-muted">

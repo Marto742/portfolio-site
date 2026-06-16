@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
+    "prebuild": "node scripts/gen-seo.mjs",
     "build": "react-router build",
     "typecheck": "react-router typegen && tsc -b",
+    "seo:gen": "node scripts/gen-seo.mjs",
+    "og:gen": "node scripts/gen-og.mjs",
+    "cv:gen": "node scripts/gen-cv.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
