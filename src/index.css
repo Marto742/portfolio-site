@@ -88,3 +88,23 @@
     }
   }
 }
+
+/* ------------------------------------------------------------------ *
+ * Hero entrance — pure CSS so it runs immediately (no hydration flash)
+ * and never gates the LCP behind JS. Skipped under reduced-motion.
+ * ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .hero-rise {
+    animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}

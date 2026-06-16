@@ -6,6 +6,7 @@ import { useLang, useT } from '../../i18n/context'
 import { workPath } from '../../i18n/routing'
 import { PROJECTS, type Project } from '../../content/projects'
 import { cn } from '../../lib/utils'
+import { Reveal, RevealGroup, RevealItem } from '../motion/reveal'
 
 function ProjectCard({
   project,
@@ -21,7 +22,7 @@ function ProjectCard({
   return (
     <article
       className={cn(
-        'flex flex-col rounded-2xl border border-line bg-surface p-8 transition-colors hover:border-accent/40',
+        'flex h-full flex-col rounded-2xl border border-line bg-surface p-8 transition-colors hover:border-accent/40',
         featured && 'sm:p-10',
       )}
     >
@@ -97,22 +98,28 @@ export function Work() {
   return (
     <Section id="work" className="border-t border-line/50">
       <Container>
-        <header className="max-w-2xl">
-          <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
-            {t.sections.work}
-          </h2>
-          <p className="mt-4 text-lg text-muted">{t.work.subtitle}</p>
-        </header>
+        <Reveal>
+          <header className="max-w-2xl">
+            <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
+              {t.sections.work}
+            </h2>
+            <p className="mt-4 text-lg text-muted">{t.work.subtitle}</p>
+          </header>
+        </Reveal>
 
         <div className="mt-12 space-y-6">
           {featured.map((project) => (
-            <ProjectCard key={project.slug} project={project} featured />
+            <Reveal key={project.slug}>
+              <ProjectCard project={project} featured />
+            </Reveal>
           ))}
-          <div className="grid gap-6 sm:grid-cols-2">
+          <RevealGroup className="grid gap-6 sm:grid-cols-2">
             {rest.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+              <RevealItem key={project.slug} className="h-full">
+                <ProjectCard project={project} />
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </Container>
     </Section>

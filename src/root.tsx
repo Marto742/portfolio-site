@@ -13,9 +13,11 @@ import '@fontsource-variable/manrope'
 import '@fontsource-variable/jetbrains-mono'
 import './index.css'
 
+import { MotionConfig } from 'motion/react'
 import { LangProvider } from './i18n/LangProvider'
 import { langFromPath } from './i18n/routing'
 import { SiteLayout } from './components/layout/SiteLayout'
+import { CursorGlow } from './components/motion/CursorGlow'
 
 export function Layout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
@@ -29,6 +31,10 @@ export function Layout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <Meta />
         <Links />
+        {/* If JS never runs, scroll-reveal elements must still be visible. */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
       </head>
       <body>
         {children}
@@ -43,10 +49,13 @@ export default function App() {
   const { pathname } = useLocation()
   const lang = langFromPath(pathname)
   return (
-    <LangProvider lang={lang}>
-      <SiteLayout>
-        <Outlet />
-      </SiteLayout>
-    </LangProvider>
+    <MotionConfig reducedMotion="user">
+      <LangProvider lang={lang}>
+        <CursorGlow />
+        <SiteLayout>
+          <Outlet />
+        </SiteLayout>
+      </LangProvider>
+    </MotionConfig>
   )
 }

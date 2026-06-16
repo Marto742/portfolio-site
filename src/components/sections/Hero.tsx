@@ -10,16 +10,28 @@ export function Hero() {
       <HeroBackground />
       <Container className="py-20">
         <div className="max-w-4xl">
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent sm:text-sm">
+          <p
+            className="hero-rise font-mono text-xs uppercase tracking-[0.25em] text-accent sm:text-sm"
+            style={{ animationDelay: '0.05s' }}
+          >
             {t.hero.eyebrow}
           </p>
-          <h1 className="mt-6 font-display text-6xl font-semibold leading-[0.95] tracking-tight text-fg sm:text-7xl lg:text-8xl">
+          <h1
+            className="hero-rise mt-6 font-display text-6xl font-semibold leading-[0.95] tracking-tight text-fg sm:text-7xl lg:text-8xl"
+            style={{ animationDelay: '0.12s' }}
+          >
             Martin Petrov
           </h1>
-          <p className="mt-8 max-w-2xl text-lg text-muted sm:text-xl">
+          <p
+            className="hero-rise mt-8 max-w-2xl text-lg text-muted sm:text-xl"
+            style={{ animationDelay: '0.22s' }}
+          >
             {t.hero.lead}
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div
+            className="hero-rise mt-10 flex flex-wrap items-center gap-4"
+            style={{ animationDelay: '0.32s' }}
+          >
             <a className={buttonClasses('primary')} href="#work">
               {t.hero.viewWork}
             </a>
@@ -27,7 +39,10 @@ export function Hero() {
               {t.hero.getInTouch}
             </a>
           </div>
-          <p className="mt-12 font-mono text-xs text-muted">
+          <p
+            className="hero-rise mt-12 font-mono text-xs text-muted"
+            style={{ animationDelay: '0.42s' }}
+          >
             {t.hero.location}
           </p>
         </div>

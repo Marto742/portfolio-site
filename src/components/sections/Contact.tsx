@@ -1,6 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { Container } from '../ui/Container'
 import { Section } from '../ui/Section'
+import { Reveal } from '../motion/reveal'
 import { buttonClasses } from '../ui/button-styles'
 import { useT } from '../../i18n/context'
 import { SITE } from '../../config'
@@ -73,12 +74,14 @@ export function Contact() {
   return (
     <Section id="contact" className="border-t border-line/50">
       <Container className="max-w-2xl">
-        <header>
-          <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
-            {t.sections.contact}
-          </h2>
-          <p className="mt-4 text-lg text-muted">{t.contact.subtitle}</p>
-        </header>
+        <Reveal>
+          <header>
+            <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
+              {t.sections.contact}
+            </h2>
+            <p className="mt-4 text-lg text-muted">{t.contact.subtitle}</p>
+          </header>
+        </Reveal>
 
         <form onSubmit={onSubmit} noValidate className="mt-10 space-y-6">
           <div>
