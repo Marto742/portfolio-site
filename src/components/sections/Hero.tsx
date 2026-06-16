@@ -2,13 +2,15 @@ import { Container } from '../ui/Container'
 import { buttonClasses } from '../ui/button-styles'
 import { useT } from '../../i18n/context'
 import { HeroBackground } from './HeroBackground'
+import { Hero3D } from '../three/Hero3D'
 
 export function Hero() {
   const t = useT()
   return (
     <section className="relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden">
       <HeroBackground />
-      <Container className="py-20">
+      <Hero3D />
+      <Container className="relative z-10 py-20">
         <div className="max-w-4xl">
           <p
             className="hero-rise font-mono text-xs uppercase tracking-[0.25em] text-accent sm:text-sm"
@@ -55,7 +57,7 @@ export function Hero() {
         <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
           {t.hero.scroll}
         </span>
-        <span className="h-10 w-px animate-pulse bg-gradient-to-b from-accent to-transparent" />
+        <span className="h-10 w-px animate-pulse bg-linear-to-b from-accent to-transparent" />
       </div>
     </section>
   )
