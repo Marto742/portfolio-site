@@ -2,7 +2,9 @@
 export const SITE = {
   name: 'Martin Petrov',
   /** Canonical production origin, no trailing slash. Set VITE_SITE_URL at deploy. */
-  url: import.meta.env.VITE_SITE_URL ?? 'https://martinpetrov.dev',
+  url:
+    import.meta.env.VITE_SITE_URL ??
+    'https://portfolio-site-theta-lilac.vercel.app',
   githubProfile: 'https://github.com/Marto742',
   repoUrl: 'https://github.com/Marto742/portfolio-site',
   email: 'bgm89044@gmail.com',

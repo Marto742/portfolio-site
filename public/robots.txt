@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://martinpetrov.dev/sitemap.xml
+Sitemap: https://portfolio-site-theta-lilac.vercel.app/sitemap.xml

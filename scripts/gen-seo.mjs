@@ -5,7 +5,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const SITE_URL = (
-  process.env.VITE_SITE_URL ?? 'https://martinpetrov.dev'
+  process.env.VITE_SITE_URL ?? 'https://portfolio-site-theta-lilac.vercel.app'
 ).replace(/\/$/, '')
 
 const slugs = ['ecommerce', 'simon-says', 'domsenz']
