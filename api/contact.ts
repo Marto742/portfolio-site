@@ -51,7 +51,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const apiKey = process.env.RESEND_API_KEY
-  const to = process.env.CONTACT_TO ?? 'petrovmartin955@gmail.com'
+  const to = process.env.CONTACT_TO ?? 'bgm89044@gmail.com'
   if (!apiKey) {
     console.error('RESEND_API_KEY is not set')
     return res.status(500).json({ error: 'Email is not configured' })

@@ -5,7 +5,7 @@ export const SITE = {
   url: import.meta.env.VITE_SITE_URL ?? 'https://martinpetrov.dev',
   githubProfile: 'https://github.com/Marto742',
   repoUrl: 'https://github.com/Marto742/portfolio-site',
-  email: 'petrovmartin955@gmail.com',
+  email: 'bgm89044@gmail.com',
   /** Tech proudly shown in the footer colophon. */
   builtWith: ['React', 'TypeScript', 'Tailwind', 'Three.js'],
 } as const
