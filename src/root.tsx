@@ -18,12 +18,15 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import { LangProvider } from './i18n/LangProvider'
 import { langFromPath } from './i18n/routing'
+import { resolveHead } from './lib/head'
 import { SiteLayout } from './components/layout/SiteLayout'
 import { CursorGlow } from './components/motion/CursorGlow'
 
 export function Layout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const lang = langFromPath(pathname)
+  // Rendered natively (not via <Meta/>) so React 19 keeps them after hydration.
+  const { title, description } = resolveHead(pathname)
   return (
     <html lang={lang}>
       <head>
@@ -31,6 +34,8 @@ export function Layout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0b0a09" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <Meta />
         <Links />
         {/* If JS never runs, scroll-reveal elements must still be visible. */}

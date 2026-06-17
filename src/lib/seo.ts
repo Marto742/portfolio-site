@@ -1,6 +1,6 @@
 import { SITE } from '../config'
-import { localizedPath, toEnPath } from '../i18n/routing'
-import type { Lang } from '../i18n/translations'
+import { langFromPath, localizedPath, toEnPath } from '../i18n/routing'
+import { resolveHead } from './head'
 
 /** Absolute URL for a path on the canonical origin. */
 function abs(path: string): string {
@@ -9,26 +9,19 @@ function abs(path: string): string {
 
 const OG_IMAGE = `${SITE.url}/og-image.png`
 
-interface PageMetaArgs {
-  lang: Lang
-  pathname: string
-  title: string
-  description: string
-}
-
 /**
- * Full per-page SEO descriptor set for a React Router `meta` export: title,
- * description, canonical, OpenGraph, Twitter card, and absolute hreflang
- * alternates derived from the current path.
+ * OpenGraph / Twitter / canonical / hreflang descriptors for a React Router
+ * `meta` export. Title + description themselves are rendered by the root
+ * Layout (see {@link resolveHead}); here they only feed the social tags.
  */
-export function pageMeta({ lang, pathname, title, description }: PageMetaArgs) {
+export function pageMeta(pathname: string) {
+  const lang = langFromPath(pathname)
+  const { title, description } = resolveHead(pathname)
   const canonical = abs(pathname)
   const enHref = abs(toEnPath(pathname))
   const bgHref = abs(localizedPath(pathname, 'bg'))
 
   return [
-    { title },
-    { name: 'description', content: description },
     { tagName: 'link', rel: 'canonical', href: canonical },
 
     { property: 'og:type', content: 'website' },

@@ -1,8 +1,6 @@
 import type { Route } from './+types/work'
 import { CaseStudy } from '../components/sections/CaseStudy'
 import { Container } from '../components/ui/Container'
-import { translations } from '../i18n/translations'
-import { langFromPath } from '../i18n/routing'
 import { pageMeta } from '../lib/seo'
 import { PROJECTS, type ProjectSlug } from '../content/projects'
 
@@ -10,14 +8,8 @@ function isProjectSlug(slug: string): slug is ProjectSlug {
   return PROJECTS.some((p) => p.slug === slug)
 }
 
-export function meta({ params, location }: Route.MetaArgs) {
-  const lang = langFromPath(location.pathname)
-  const t = translations[lang]
-  const slug = params.slug
-  const project = isProjectSlug(slug) ? t.work.projects[slug] : undefined
-  const title = project ? `${project.name} — ${t.meta.title}` : t.meta.title
-  const description = project?.tagline ?? t.meta.description
-  return pageMeta({ lang, pathname: location.pathname, title, description })
+export function meta({ location }: Route.MetaArgs) {
+  return pageMeta(location.pathname)
 }
 
 export default function WorkRoute({ params }: Route.ComponentProps) {
