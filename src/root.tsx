@@ -14,6 +14,8 @@ import '@fontsource-variable/jetbrains-mono'
 import './index.css'
 
 import { MotionConfig } from 'motion/react'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { LangProvider } from './i18n/LangProvider'
 import { langFromPath } from './i18n/routing'
 import { SiteLayout } from './components/layout/SiteLayout'
@@ -55,6 +57,8 @@ export default function App() {
         <SiteLayout>
           <Outlet />
         </SiteLayout>
+        <Analytics />
+        <SpeedInsights />
       </LangProvider>
     </MotionConfig>
   )
