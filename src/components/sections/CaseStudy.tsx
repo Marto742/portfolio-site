@@ -78,9 +78,18 @@ export function CaseStudy({ slug }: { slug: ProjectSlug }) {
           {content.intro}
         </p>
 
-        {slug === 'simon-says' && (
+        {slug === 'simon-says' ? (
           <div className="mt-10">
             <VideoEmbed id={SIMON_VIDEO_ID} title={tp.name} />
+          </div>
+        ) : (
+          <div className="mt-10 overflow-hidden rounded-2xl border border-line">
+            <img
+              src={`/projects/${slug}.webp`}
+              alt={tp.name}
+              loading="lazy"
+              className="w-full"
+            />
           </div>
         )}
 
