@@ -21,7 +21,10 @@ export function Skills() {
 
         <Reveal className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
           {SKILL_GROUPS.map((group) => (
-            <div key={group.id} className="bg-surface p-8">
+            <div
+              key={group.id}
+              className="bg-surface p-8 transition-colors duration-300 hover:bg-[#1c1813]"
+            >
               <h3 className="font-display text-xl text-fg">
                 {t.skills.groups[group.id]}
               </h3>

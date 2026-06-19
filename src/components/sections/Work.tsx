@@ -22,8 +22,8 @@ function ProjectCard({
   return (
     <article
       className={cn(
-        'flex h-full flex-col rounded-2xl border border-line bg-surface p-8 transition-colors hover:border-accent/40',
-        featured && 'sm:p-10',
+        'flex h-full flex-col rounded-2xl border border-line bg-surface p-8 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_50px_-24px_rgba(212,168,67,0.22)]',
+        featured && 'shadow-[0_0_70px_-30px_rgba(212,168,67,0.25)] sm:p-10',
       )}
     >
       <div className="flex items-center justify-between gap-4">

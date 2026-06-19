@@ -23,6 +23,15 @@ const en = {
     location: 'Plovdiv, Bulgaria · Available for work',
     scroll: 'Scroll',
   },
+  stats: {
+    label: 'By the numbers',
+    items: [
+      { value: '17', label: 'years old' },
+      { value: '3', label: 'shipped projects' },
+      { value: '~150', label: 'tests written' },
+      { value: '100%', label: 'admin coverage' },
+    ],
+  },
   about: {
     heading: "I taught myself to build — and I didn't stop at code.",
     paragraphs: [
@@ -158,6 +167,15 @@ const bg: Translations = {
     getInTouch: 'Свържи се',
     location: 'Пловдив, България · Свободен за работа',
     scroll: 'Надолу',
+  },
+  stats: {
+    label: 'С числа',
+    items: [
+      { value: '17', label: 'години' },
+      { value: '3', label: 'завършени проекта' },
+      { value: '~150', label: 'написани теста' },
+      { value: '100%', label: 'admin покритие' },
+    ],
   },
   about: {
     heading: 'Научих се да градя сам — и не спрях при кода.',

@@ -26,7 +26,10 @@ export function About() {
 
         <Reveal className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
           {t.about.pillars.map((pillar) => (
-            <div key={pillar.title} className="bg-surface p-8">
+            <div
+              key={pillar.title}
+              className="bg-surface p-8 transition-colors duration-300 hover:bg-[#1c1813]"
+            >
               <h3 className="font-display text-xl text-fg">{pillar.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {pillar.body}

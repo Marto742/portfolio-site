@@ -1,4 +1,5 @@
 import { Hero } from './sections/Hero'
+import { Stats } from './sections/Stats'
 import { About } from './sections/About'
 import { Work } from './sections/Work'
 import { Skills } from './sections/Skills'
@@ -9,6 +10,7 @@ export function HomePage() {
   return (
     <>
       <Hero />
+      <Stats />
       <About />
       <Work />
       <Skills />
